@@ -1,0 +1,17 @@
+# Scampi Ports: 
+# 7895
+# 7880
+# 7895
+# 1234
+# 2244
+# 1234
+# 7744
+# 5050
+# 14141
+ #FULL: 
+ #docker run -d --name scampi-runner -p 7895:7895 -p 7880:7880 -p 7895:7895 -p 1234:1234 -p 2244:2244 -p 1234:1234 -p 7744:7744 -p 5050:5050 -p 14141:14141 arnolde/scampi-runner
+ #Minimized:
+ #docker run -d --name scampi-runner -p 7744:7744 -p 5050:5050 arnolde/scampi-runner
+ docker run --name scampi-runner -p 7880:7880 -p 7895:7895 -p 2244:2244 -p 1234:1234 -p 7744:7744 -p 5050:5050 -p 14141:14141 arnolde/scampi-runner
+ # docker run --name nginx-runner -p 80:80 --link scampi-runner:scampi-runner arnolde/scampi-nginx
+ docker run --name nginx-runner -p 80:80 arnolde/scampi-nginx
