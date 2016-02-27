@@ -17,7 +17,7 @@
 docker run --name nginx-runner -p 80:80 arnolde/scampi-nginx
 docker run --name nginx-runner -p 80:80 -p 7895:7895 -p 1234:1234 arnolde/scampi-nginx
 docker run --name nginx-runner -p 80:80 -p 7895:7895 -p 1234:1234 -p 5050:5050 arnolde/scampi-nginx
-docker run --name nginx-runner -p 80:80 -p 7895:7895 -p 1234:1234 -p 5050:5050 -p 6552:6552 arnolde/scampi-nginx
+docker run --name nginx-runner --ip 192.168.2.137 -p 192.168.2.137:80:80 -p 192.168.2.137:7895:7895 -p 192.168.2.137:1234:1234 -p 192.168.2.137:5050:5050 -p 192.168.2.137:6552:6552 arnolde/scampi-nginx
 
 docker stop nginx-runner && docker rm nginx-runner
 
